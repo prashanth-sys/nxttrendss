@@ -1,0 +1,81 @@
+.cart-container {
+  display: flex;
+  justify-content: center;
+  min-height: 75vh;
+}
+
+@media screen and (min-width: 768px) {
+  .cart-container {
+    min-height: 90vh;
+  }
+}
+
+.cart-content-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1110px;
+}
+
+@media screen and (min-width: 768px) {
+  .cart-content-container {
+    width: 80%;
+    max-width: 1110px;
+  }
+}
+
+.cart-heading {
+  color: #3e4c59;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .cart-heading {
+    font-size: 48px;
+  }
+}
+
+/* Write your CSS here */
+.button-remove {
+  background-color: transparent;
+  color: #0b69ff;
+  display: flex;
+  align-self: flex-end;
+  border-width: 0px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+.cart-summery {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.total-cost {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #616e7c;
+  font-weight: bold;
+}
+.span {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #171f46;
+  font-weight: bold;
+}
+.total-items {
+  font-family: 'Roboto';
+  font-size: 13px;
+  color: #616e7c;
+}
+.button-sp {
+  background-color: #0b69ff;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 0px;
+  border-radius: 5px;
+  height: 32px;
+  width: 110px;
+  border-width: 0px;
+}
