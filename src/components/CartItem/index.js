@@ -25,7 +25,11 @@ const CartItem = props => (
       }
 
       const onClickDecrement = () => {
-        decrementCartItemQuantity(id)
+        if (quantity === 1) {
+          removeCartItem(id)
+        } else {
+          decrementCartItemQuantity(id)
+        }
       }
 
       return (
@@ -48,6 +52,14 @@ const CartItem = props => (
               </button>
               <p className="cart-quantity">{quantity}</p>
               <button
+                className="remove-button"
+                type="button"
+                onClick={onRemoveCartItem}
+              >
+                Remove
+              </button>
+
+              <button
                 type="button"
                 className="quantity-controller-button"
                 onClick={onClickIncrement}
@@ -65,6 +77,7 @@ const CartItem = props => (
             className="delete-button"
             type="button"
             onClick={onRemoveCartItem}
+            data-testid="remove"
           >
             .
             <AiFillCloseCircle color="#616E7C" size={20} />
